@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg-color: #090c31;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #090c31;
+    display: grid;
+    place-items: center;
+}
+
+.calculadora {
+    background-color: #15173c;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 350px;
+    max-width: 100%;
+    padding: 1.5rem;
+    gap: .5rem;
+    border-radius: .5rem;
+}
+
+.resultado {
+    grid-column: 1 / -1;
+    background-color: #090c31;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.btn {
+    background-color: #15173c;
+    color: white;
+    border: 0;
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #090c31c2;
+    border-radius: .5rem;
+}
+
+.btn:hover {
+    background-color: #090c31;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+#cero {
+    grid-column: span 2;
+}
+
+#igual {
+    grid-row: span 2;
+    background-color: #e6394a;
+    border-radius: .5rem;
+}
+
+#igual:hover {
+    background-color: #e65766;
+}
+
+#toggle_container{
+    background-color: #f8f8f8;
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    box-shadow: inset 4px 4px 6px #cecece,
+                inset -4px -4px 6px #fff;
+    margin: 0px auto;
+    cursor: pointer;
+    border-radius: 25px;
+    top: 15px;
+    right: 15px;
+}
+
+.toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    transform: scale(.7);
+    background: linear-gradient(145deg, #090c31, #15173c);
+    border-radius: 25px;
+    box-shadow: 3px 3px 8px #c4c4c4,
+                -3px -3px 8px #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out .5s;
+}
+
+.toggle img{
+    width: 25px;
+}
+
+#toggle_container.active .toggle{
+    left: 40px;
+    transition: all ease-in-out .5s;
+}
+
+body.active{
+    background-color: rgb(235, 235, 235);
+}
+
+
